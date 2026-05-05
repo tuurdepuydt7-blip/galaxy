@@ -25,6 +25,21 @@ body {
   margin-bottom: 20px;
 }
 
+#skipButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#skipButton:hover {
+  background: rgba(255,255,255,0.4);
+}
+
 .hidden {
   display: none;
 }
