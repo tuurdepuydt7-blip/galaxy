@@ -11,11 +11,15 @@ const voiceButton = document.getElementById('voiceButton');
 let mediaRecorder;
 let audioChunks = [];
 
-// Hide splash after 2 seconds
-setTimeout(() => {
+// Hide splash after 1 second or on skip click
+const hideSplash = () => {
   splash.classList.add('hidden');
   app.classList.remove('hidden');
-}, 2000);
+};
+
+setTimeout(hideSplash, 1000);
+
+document.getElementById('skipButton').addEventListener('click', hideSplash);
 
 sendButton.addEventListener('click', sendMessage);
 messageInput.addEventListener('keypress', (e) => {
